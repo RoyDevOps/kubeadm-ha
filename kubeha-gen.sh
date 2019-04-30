@@ -150,7 +150,7 @@ kubeadm init --config /etc/kubernetes/kubeadm-config.yaml
 mkdir -p $HOME/.kube
 cp -f /etc/kubernetes/admin.conf ${HOME}/.kube/config
 
-curl -fsSL https://github.com/projectcalico/calico/blob/master/v2.6/getting-started/kubernetes/installation/hosted/calico.yaml | sed "s!8.8.8.8!${CP0_IP}!g" | sed "s!192.168.0.0/16!${CIDR}!g" | kubectl apply -f -
+curl -fsSL https://raw.githubusercontent.com/projectcalico/calico/blob/master/v2.6/getting-started/kubernetes/installation/hosted/calico.yaml | sed "s!8.8.8.8!${CP0_IP}!g" | sed "s!192.168.0.0/16!${CIDR}!g" | kubectl apply -f -
 
 JOIN_CMD=`kubeadm token create --print-join-command`
 
