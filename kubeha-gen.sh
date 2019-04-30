@@ -204,7 +204,6 @@ emailAddress_value              = lentil1016@gmail.com
 openssl req -newkey rsa:4096 -nodes -config ~/ikube/tls/openssl.cnf -days 3650 -x509 -out ~/ikube/tls/tls.crt -keyout ~/ikube/tls/tls.key
 kubectl create -n kube-system secret tls ssl --cert ~/ikube/tls/tls.crt --key ~/ikube/tls/tls.key
 kubectl apply -f https://raw.githubusercontent.com/Lentil1016/kubeadm-ha/1.14.0/plugin/traefik.yaml
-kubectl apply -f https://raw.githubusercontent.com/Lentil1016/kubeadm-ha/1.14.0/plugin/metrics.yaml
 kubectl apply -f https://raw.githubusercontent.com/Lentil1016/kubeadm-ha/1.14.0/plugin/kubernetes-dashboard.yaml
 
 echo "Plugin install finished."
