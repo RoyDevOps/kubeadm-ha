@@ -203,7 +203,7 @@ emailAddress_value              = anoncrayzer@protonmail.com
 """ > ~/ikube/tls/openssl.cnf
 openssl req -newkey rsa:4096 -nodes -config ~/ikube/tls/openssl.cnf -days 3650 -x509 -out ~/ikube/tls/tls.crt -keyout ~/ikube/tls/tls.key
 kubectl create -n kube-system secret tls ssl --cert ~/ikube/tls/tls.crt --key ~/ikube/tls/tls.key
-kubectl apply -f https://raw.githubusercontent.com/RoyDevOps/kubeadm-ha/1.14.0/plugin/traefik.yaml
+kubectl apply -f https://raw.githubusercontent.com/RoyDevOps/kubeadm-ha/master/plugin/traefik.yaml
 kubectl apply -f https://raw.githubusercontent.com/RoyDevOps/kubeadm-ha/1.14.0/plugin/metrics.yaml
 kubectl apply -f https://raw.githubusercontent.com/RoyDevOps/kubeadm-ha/1.14.0/plugin/kubernetes-dashboard.yaml
 
